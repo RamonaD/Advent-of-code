@@ -1,8 +1,5 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
 """
 Created on Sun Dec  1 22:10:24 2019
-
 @author: ramonaD
 """
 ## advent of code 2019
@@ -14,9 +11,17 @@ def round_down(n, decimals=0):
 
 #part one
 with open('input.txt') as f:
-    #result = []
+    result = []
     sum = 0
     for line in f:
+        print("---------------------")
+        operation = round_down((float(line)/3)-2)
+        sum = sum+operation
+        print(line, 'fuel required is: ', operation)
+        print('Total fuel required is: ', sum)
+    
+#part two
+for line in f:
         print("----------------------")
         operation = line
         partial_result = 0
@@ -32,9 +37,6 @@ with open('input.txt') as f:
         sum = sum+partial_result
 #        print(line, 'fuel required is: ', partial_result)
         print('Total fuel required is: ', sum)
-    
-#part two
-
 
 #while (operation>):
     
