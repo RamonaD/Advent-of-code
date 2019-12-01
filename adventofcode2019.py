@@ -14,29 +14,25 @@ with open('input.txt') as f:
     result = []
     sum = 0
     for line in f:
-        print("---------------------")
+#        print("---------------------")
         operation = round_down((float(line)/3)-2)
         sum = sum+operation
-        print(line, 'fuel required is: ', operation)
-        print('Total fuel required is: ', sum)
+        print('Part one: Total fuel required is: ', sum)
     
 #part two
 for line in f:
-        print("----------------------")
+#        print("----------------------")
         operation = line
         partial_result = 0
         while (operation > 0):
             operation = round_down((float(operation)/3)-2)
-            print("result", operation)
+#            print("result", operation)
             if (operation <= 0):
                 operation = 0
             partial_result = partial_result + operation
-            print("partial result",partial_result)
+#            print("partial result",partial_result)
             if (operation <= 0):
                 break
         sum = sum+partial_result
 #        print(line, 'fuel required is: ', partial_result)
-        print('Total fuel required is: ', sum)
-
-#while (operation>):
-    
+        print('Part two: Total fuel required is: ', sum)
